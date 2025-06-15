@@ -1,0 +1,30 @@
+@startuml
+
+left to right direction
+
+actor User
+
+package View {
+    [QuestionView]
+    [AnswerView]
+}
+
+package Controller {
+    [AnswerController]
+}
+
+package Model {
+    [AnswerEntity]
+    [QuestionEntity]
+}
+
+User --> [QuestionView] : 1 : openQuestion()
+[QuestionView] -right-> [AnswerView] : 2 : showAnswerForm()
+User --> [AnswerView] : 3 : createAnswer()
+[AnswerView] --> [AnswerController] : 4 : createAnswer(questionId, content)
+
+[AnswerController] --> [QuestionEntity] : 5 : findQuestionById(questionId)
+[AnswerController] --> [AnswerEntity] : 6 : save(content, user, date)
+[QuestionEntity] -right-> [AnswerEntity]
+
+@enduml

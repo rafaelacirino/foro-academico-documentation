@@ -1,0 +1,82 @@
+@startuml
+
+header Domain Model
+
+Forum *-down-> "*" User
+Forum *-down-> "*" Notification
+Forum *-down-> "*" Question
+User *-down-> Profile
+User .-left-> Role
+Notification .down-> NotificationType
+Question *-down-> "*" Answer
+Question "*" o-down-> "0..*" Tag
+Answer *-down-> "*" Comment
+
+
+class User {
+- id*: Long
+- firstName: String
+- lastName: String
+- userName: String
+- phone: String
+- email: String
+- password: String
+- role: Role
+}
+
+enum Role {
+- ADMIN
+- CUSTOMER
+- GUEST
+}
+
+enum NotificationType {
+- QUESTION_REPLIED
+- ANSWER_RATED
+}
+
+class Profile {
+- id*: Long
+- name: String
+- description: String
+}
+
+class Question {
+- id*: Long
+- title: String
+- description: String
+- date: LocalDateTime
+- user: String
+- views: Integer
+}
+
+class Answer {
+- id*: Long
+- content: String
+- date: LocalDateTime
+- user: String
+- isCorrect: Boolean
+}
+
+class Comment {
+- id*: Long
+- reason: String
+- date: LocalDateTime
+- user: String
+}
+
+class Tag {
+- id*: Long
+- category: String
+}
+
+class Notification {
+- id*: Long
+- message: String
+- date: LocalDateTime
+- isRead: Boolean
+- user: String
+- notificationType: NotificationType
+}
+
+@enduml

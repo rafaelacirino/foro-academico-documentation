@@ -1,0 +1,12 @@
+@startuml
+
+header Open Users
+
+state " " as s1
+
+
+Opened_Profile --> s1 : Admin requests to show users
+
+s1 --> Opened_Users : System shows users
+
+@enduml

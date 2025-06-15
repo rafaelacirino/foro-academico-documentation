@@ -1,0 +1,31 @@
+@startuml
+
+left to right direction
+
+actor User
+
+package View {
+    [QuestionsView]
+}
+
+package Controller {
+    [SearchController]
+}
+
+package Model {
+    [QuestionEntity]
+    [AnswerEntity]
+    [CommentEntity]
+    [TagEntity]
+}
+
+User --> [QuestionsView] : 1 : searchContent()
+[QuestionsView] --> [SearchController] : 2 : searchContent(content)
+
+[SearchController] --> [QuestionEntity] : 3a : findByQuestions(content)
+[SearchController] --> [TagEntity] : 3b : findByTags(content)
+
+[QuestionEntity] -right-> [AnswerEntity] : 4 : findByAnswers(content)
+[AnswerEntity] -right-> [CommentEntity] : 5 : findByComments(content)
+
+@enduml
