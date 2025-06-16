@@ -4,24 +4,35 @@
 
 ## Estructura del repositorio:
 
-1. Logic
+### 1. Logic
 Esta carpeta contiene dos subcarpetas que son divididas en packages y useCaseAnalysis.
-2. Packages
-Esta subcarpeta contiene diagramas desarrollados de las carpetas del proyecto.
+
+### Packages
+Esta subcarpeta contiene los diagramas desarrollados de los paquetes del proyecto.
 * Paquete de Controladores;
 * Paquete de las clases de Modelo;
-* Paquestes generales que demuenstran la arquitectura que fue seguida;
-* Paquetes de las vistas.
-3. UseCaseAnalysis
-Subcarpeta con analise de los casos de uso desarrollados.
-4. UseCases
-Paquete con los casos de uso de la aplicación. En esta carpeta, también se encuentran tres subcarpetas: contextUser, especificacionesCasosDeUser y User. 
-5. ConxtUser
-Subpaquete con los diagramas de caso de uso por contexto de usuario.
+* Paquetes generales (arquitectura MVC);
+* Paquetes de las Vistas.
+
+### UseCaseAnalysis
+Subcarpeta con los análisis de los casos de uso desarrollados.
+
+
+### 2. UseCases
+Paquete con los casos de uso de la aplicación. En esta carpeta, también se encuentran dos subcarpetas: context y especifications. 
+
+* Use Cases
+* Use Cases Admin;
+* Use Cases Member;
+* Use Cases Guest.
+
+### Context
+Subcarpeta con los diagramas de contexto de los actores.
 * Diagrama de Contexto de Administrador;
-* Diagrama de Contexto de Visita;
+* Diagrama de Contexto de Visitante;
 * Diagrama de Contesto de Member.
-6. EspecificacionesCasosDeUso
+
+### Especifications
 Subpaquete con especificaciones de los casos de uso.
 * Change Password;
 * Create Answer;
@@ -34,24 +45,17 @@ Subpaquete con especificaciones de los casos de uso.
 * Delete Tag;
 * Login;
 * Logout;
-* Mark Answer As Correct;
-* Open Dashboard;
 * Open My Questions;
 * Open Notification;
 * Open Question;
 * Open Tags;
 * Open Users;
-* Restore PAssword;
+* Restore Password;
 * Search Content;
 * Search Tags;
 * SignUp;
 * Update Profile;
 * Update Tag.
-6. User
-Esta subcarpeta están los casos de uso para los respectivos roles.
-* Use Case Admin;
-* Use Case Member;
-* Use Case Guest.
-7. Diagrama de Modelo
 
-> Para dudas, contactar equipo del proyecto.
+### 3. Diagrama del Modelo del Dominio
+
