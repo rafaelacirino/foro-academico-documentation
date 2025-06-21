@@ -59,3 +59,11 @@ Subpaquete con especificaciones de los casos de uso.
 
 ### 3. Diagrama del Modelo del Dominio
 
+### 4. Architecture
+
+### Backend
+* Modelo de entidad
+* Arquitectura de Spring
+
+### Frontend
+* Arquitectura de Angular
